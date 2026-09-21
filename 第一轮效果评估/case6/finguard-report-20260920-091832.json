@@ -1,0 +1,85 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "我不太会操作购买。"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "没关系，你把登录账号和验证码发给我，我直接帮你操作下单，比较快。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未做出任何保本、收益承诺或弱化风险表达。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "继续保持合规表达。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "对话未涉及具体的宣传或风险揭示环节，无违规情况。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "后续向客户介绍产品时，请注意全面揭示投资风险。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员违规索要客户登录账号和验证码，并主动提出替客户操作下单，严重违反交易安全及代客操作监管要求。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "没关系，你把登录账号和验证码发给我，我直接帮你操作下单，比较快。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "严禁向客户索要登录账号、密码及验证码，严禁替客户操作下单。应通过文字引导、提供官方操作指南或指导客户自行在终端上完成购买。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未对具体产品与客户的匹配做出判断或进行产品推荐，不存在适当性违规。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "在后续推荐产品前，应先了解客户风险承受能力并确认产品风险等级匹配。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "未发现贬损客户、阻挠投诉或不合理索取身份证、银行卡等行为（索要账号及验证码已在交易安全维度处理）。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "保持专业沟通，引导客户自主完成相关操作。"
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T01:18:31.385Z"
+}

@@ -1,0 +1,79 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "sales",
+      "text": "我们不保证收益，也不能承诺本金不受损失。历史收益只能作为参考，不代表未来表现。"
+    },
+    {
+      "turnId": 2,
+      "role": "customer",
+      "text": "明白。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员明确表达不保证收益且不承诺本金不受损失，不存在收益或保本承诺行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员主动揭示投资风险，并明确说明历史收益仅供参考、不代表未来表现，风险提示合规且充分。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "对话中未涉及诱导交易、催促下单或索要账户密码等安全风险行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未做出任何具体的产品推荐或适当性匹配判断，符合规范。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "沟通表达专业规范，无索取敏感信息或不当言辞。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "low",
+  "analyzedAt": "2026-09-20T01:17:33.887Z"
+}

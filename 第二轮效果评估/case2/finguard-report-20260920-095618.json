@@ -1,0 +1,106 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "sales",
+      "text": "这款产品你可以放心买，本金肯定没问题，年化至少能有8%。"
+    },
+    {
+      "turnId": 2,
+      "role": "customer",
+      "text": "真的不会亏吗？"
+    },
+    {
+      "turnId": 3,
+      "role": "sales",
+      "text": "放心，不会亏的。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确承诺本金安全且保证不会亏损，属于典型的保本保收益违规。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "本金肯定没问题，年化至少能有8%"
+        },
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "放心，不会亏的。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "投资有风险，理财产品过往业绩不代表未来表现，请您根据自身风险承受能力审慎决策。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售在推介过程中完全未提及投资风险，且通过“放心买”、“不会亏”等话术严重淡化了产品风险。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "这款产品你可以放心买"
+        },
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "放心，不会亏的。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "在介绍产品时，请务必同步揭示产品可能存在的市场风险、流动性风险等，不得隐瞒或淡化风险。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "对话中未发现强行催促交易、代客操作或索要敏感账户信息等行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售虽有推荐用语，但未将产品与客户具体风险等级进行匹配性判断，且保本承诺已在收益承诺维度处理。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "建议在推荐产品前，先引导客户完成风险测评，并根据测评结果推荐匹配的产品。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "沟通用语未发现贬损客户、威胁或不当索取敏感信息的情况。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T01:56:17.461Z"
+}

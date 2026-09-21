@@ -1,0 +1,107 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "sales",
+      "text": "这款产品过去一年表现相对稳定，但历史业绩不代表未来收益。"
+    },
+    {
+      "turnId": 2,
+      "role": "customer",
+      "text": "那本金能保证吗？"
+    },
+    {
+      "turnId": 3,
+      "role": "sales",
+      "text": "不能保证，这类投资存在本金亏损的可能。您可以先了解产品风险，再决定是否购买。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确表示不能保证本金安全，并提示存在亏损可能，符合风险揭示要求。",
+      "evidence": [
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "不能保证，这类投资存在本金亏损的可能。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售在提及历史业绩时主动提示了风险，并明确告知投资存在亏损可能，风险揭示充分。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "但历史业绩不代表未来收益。"
+        },
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "这类投资存在本金亏损的可能。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未进行任何催促交易或索要敏感信息的操作。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未做出产品匹配判断，而是建议客户先了解风险，符合适当性管理要求。",
+      "evidence": [
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "您可以先了解产品风险，再决定是否购买。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售沟通专业，无不当言论。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "low",
+  "analyzedAt": "2026-09-20T01:55:44.127Z"
+}

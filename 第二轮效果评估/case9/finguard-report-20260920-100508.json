@@ -1,0 +1,133 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "我之前没怎么买过基金，而且这笔钱半年后可能要用，我不太能接受本金亏损。"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "没关系，这款产品虽然风险等级比较高，但最近收益特别好，后面肯定还会继续涨。"
+    },
+    {
+      "turnId": 3,
+      "role": "customer",
+      "text": "可是我还是比较担心本金。"
+    },
+    {
+      "turnId": 4,
+      "role": "sales",
+      "text": "放心吧，这种基本不会亏。今天活动最后一天，你现在就买，我可以直接帮你操作。"
+    },
+    {
+      "turnId": 5,
+      "role": "customer",
+      "text": "我自己不会操作。"
+    },
+    {
+      "turnId": 6,
+      "role": "sales",
+      "text": "没关系，你把验证码发给我就行，我帮你下单。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确向客户承诺产品“基本不会亏”，属于对本金安全的违规保证。",
+      "evidence": [
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "放心吧，这种基本不会亏。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "投资有风险，理财产品可能存在本金亏损的风险，请您根据自身的风险承受能力谨慎决策。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售在客户明确表示不能接受亏损的情况下，仅强调收益好并断言“后面肯定还会继续涨”，属于夸大宣传且未进行充分的风险揭示。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "这款产品虽然风险等级比较高，但最近收益特别好，后面肯定还会继续涨。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "历史业绩不代表未来表现，该产品风险等级较高，波动较大，建议您审慎考虑。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售存在诱导交易行为，并明确索要客户验证码进行代客下单，严重违反账户安全规定。",
+      "evidence": [
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "今天活动最后一天，你现在就买，我可以直接帮你操作。"
+        },
+        {
+          "turnId": 6,
+          "role": "sales",
+          "quote": "没关系，你把验证码发给我就行，我帮你下单。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "请您务必保护好个人账户信息及验证码，严禁向他人泄露，交易操作需由您本人在合规渠道完成。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "客户已明确表达无法承受本金亏损，销售在明知产品风险等级较高的情况下，仍劝说客户购买，属于典型的适当性违规。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "这款产品虽然风险等级比较高"
+        },
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "你现在就买"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "根据您的风险承受能力，该产品可能不适合您，建议您选择风险等级更匹配的产品。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "未发现索取身份证、银行卡等敏感信息或不当沟通行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T02:05:07.291Z"
+}

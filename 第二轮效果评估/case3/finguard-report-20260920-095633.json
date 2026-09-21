@@ -1,0 +1,91 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "你们这个是不是保证收益？是不是肯定不会亏？"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "不能这样理解，我们不能保证收益，也不能保证本金，投资存在亏损风险。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确否认了保本保收益的承诺，并主动揭示了投资风险，符合合规要求。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "我们不能保证收益，也不能保证本金，投资存在亏损风险。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售针对客户关于收益和亏损的询问，进行了客观的风险揭示，未见夸大或隐瞒风险的行为。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "投资存在亏损风险。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "对话中未涉及任何交易诱导或账户安全相关操作。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未进行任何产品推荐或匹配判断，仅对客户的询问进行了合规应答。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售沟通专业，未涉及敏感信息索取或不当言论。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "low",
+  "analyzedAt": "2026-09-20T01:56:32.924Z"
+}

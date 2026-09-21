@@ -1,0 +1,94 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "这个产品怎么样？"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "这个产品非常适合你，我建议你直接配置一些。"
+    },
+    {
+      "turnId": 3,
+      "role": "customer",
+      "text": "好的。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未做出保本、保收益或确定收益率等表述。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "请继续保持合规表达，不向客户承诺收益或保本。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未出现夸大宣传、隐瞒风险或将历史业绩作为未来确定结果的违规行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "请继续保持合规表达，在介绍产品时全面提示投资风险。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未出现强行催促交易、代客操作或索要账户密码等违规行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "请继续保持合规表达，保障客户账户安全及自主交易权利。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "warning",
+      "finalStatus": "warning",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员主动对产品与客户的匹配做出了具体判断（“这个产品非常适合你”），但对话中缺少支持该判断的关键背景信息。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "这个产品非常适合你，我建议你直接配置一些。"
+        }
+      ],
+      "missingInformation": [
+        "客户风险承受能力等级",
+        "产品风险等级",
+        "风险测评记录"
+      ],
+      "suggestion": "建议销售人员先完成客户风险测评，明确客户风险等级与产品风险等级匹配后，再给出具体的适配性判断及配置建议。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员沟通态度正常，未索取不必要敏感信息，无阻挠投诉或贬损客户等行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "请继续保持专业、礼貌的沟通方式。"
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "medium",
+  "analyzedAt": "2026-09-20T01:19:04.775Z"
+}

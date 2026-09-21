@@ -1,0 +1,105 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "sales",
+      "text": "这个产品你放心，公司到时候一定会原价回购。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确承诺公司会原价回购，属于对本金安全的保证，构成违规。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "这个产品你放心，公司到时候一定会原价回购。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "投资有风险，产品到期后的兑付情况取决于底层资产的实际运作表现，我们无法承诺回购。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售通过承诺回购来淡化产品风险，未进行必要的风险揭示。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "这个产品你放心，公司到时候一定会原价回购。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "请务必向客户充分揭示产品风险，说明投资可能面临的亏损情况，不得以任何形式淡化风险。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "未发现强行催促交易或索要账户敏感信息行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售虽有不当承诺，但未将产品与客户具体风险等级进行匹配判断，该行为已在收益承诺维度处理。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "沟通用语未见明显不专业或威胁贬损行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [
+    {
+      "ruleId": "custom_1789869547876_6icpfz",
+      "ruleName": "禁止承诺回购",
+      "matched": true,
+      "aiStatus": "warning",
+      "finalStatus": "warning",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确承诺公司一定会原价回购，违反了禁止承诺回购的规定。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "公司到时候一定会原价回购"
+        }
+      ],
+      "suggestion": "严禁向客户做出任何形式的回购承诺。"
+    }
+  ],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T02:04:23.465Z"
+}

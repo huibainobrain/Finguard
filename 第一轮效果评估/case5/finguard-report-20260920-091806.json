@@ -1,0 +1,91 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "这个产品风险大吗？"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "风险肯定还是有的，我不能跟你说百分之百保证，但这个过去一直很稳，基本不可能亏，你放心买就行。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员使用“基本不可能亏”等表述，变相弱化本金亏损可能性，属于不当表达和变相本金收益承诺。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "基本不可能亏"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "请明确提示“投资有风险，产品不保证本金和收益，存在本金亏损可能”。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员将历史业绩“过去一直很稳”作为未来确定性结果的依据，淡化投资风险，揭示不充分。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "但这个过去一直很稳，基本不可能亏"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "向客户客观说明产品风险等级及特征，明确告知“历史业绩不代表未来表现”。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "未发现索要密码、验证码、代客下单或制造紧迫感强行催促交易等违规行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "保持合规服务，引导客户自主决策。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "客户仅询问产品风险，未明确表达具体风险承受能力；销售未对产品与客户匹配度做出具体断言，未触发适当性判定风险信号。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "建议在推荐具体产品前了解客户风险偏好并引导完成风险测评。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "对话中未出现索取敏感信息、威胁贬损客户等不当沟通行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "保持专业礼貌沟通。"
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T01:18:04.113Z"
+}

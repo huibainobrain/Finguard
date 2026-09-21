@@ -1,0 +1,152 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "我之前没怎么买过基金，而且最近手头的钱半年内可能要用，不太能接受亏损。"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "没关系，这款虽然风险等级高一点，但最近收益特别好，后面大概率还会继续涨。"
+    },
+    {
+      "turnId": 3,
+      "role": "customer",
+      "text": "可是我比较担心本金。"
+    },
+    {
+      "turnId": 4,
+      "role": "sales",
+      "text": "放心吧，这种基本不会亏。今天活动最后一天，你现在就买，我可以帮你操作。"
+    },
+    {
+      "turnId": 5,
+      "role": "customer",
+      "text": "怎么操作？"
+    },
+    {
+      "turnId": 6,
+      "role": "sales",
+      "text": "你把验证码发给我就可以了。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员在客户表达担心本金时使用‘放心吧，这种基本不会亏’，变相弱化本金亏损可能并构成收益与保本承诺。",
+      "evidence": [
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "放心吧，这种基本不会亏。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "销售人员严禁向客户承诺保本或表达‘基本不会亏’等暗示无亏损风险的话术，应明确告知产品存在本金亏损风险。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员仅强调产品过往收益好并推测‘后面大概率还会继续涨’，把历史业绩作为未来确定结果的依据，且在客户多次表达风险担忧时淡化风险，未进行充分的风险揭示。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "没关系，这款虽然风险等级高一点，但最近收益特别好，后面大概率还会继续涨。"
+        },
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "放心吧，这种基本不会亏。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "销售人员应客观全面揭示产品风险，不得以过往业绩推测未来收益，需明确提示投资有风险、入市需谨慎。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员催促客户立即购买，主动提出‘我可以帮你操作’，并向客户索要手机验证码，存在严重的代客操作与账户安全风险。",
+      "evidence": [
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "今天活动最后一天，你现在就买，我可以帮你操作。"
+        },
+        {
+          "turnId": 6,
+          "role": "sales",
+          "quote": "你把验证码发给我就可以了。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "销售人员严禁代客操作，严禁向客户索要手机验证码、交易密码等敏感凭证，应指导客户自主完成交易。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "客户已明确表达缺乏投资经验、短期用钱且无法接受本金亏损，销售人员依然向其推介高风险等级产品并劝说购买，推荐行为与客户表达的风险承受能力存在明显冲突。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "没关系，这款虽然风险等级高一点，但最近收益特别好，后面大概率还会继续涨。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "销售人员应首先对客户进行风险承受能力测评，了解客户投资期限与偏好，严格根据适当性匹配原则推荐相匹配的产品。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未出现阻挠投诉、威胁贬损客户或不合理索取身份证/银行卡等敏感信息的沟通问题。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "继续保持规范专业的沟通方式。"
+    }
+  ],
+  "customRuleResults": [
+    {
+      "ruleId": "custom_1789815988647_yy231s",
+      "ruleName": "禁止诱导交易",
+      "matched": true,
+      "aiStatus": "warning",
+      "finalStatus": "warning",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员使用‘今天活动最后一天，你现在就买’制造紧迫感并催促客户立即下单，触犯禁止诱导交易规则。",
+      "evidence": [
+        {
+          "turnId": 4,
+          "role": "sales",
+          "quote": "今天活动最后一天，你现在就买，我可以帮你操作。"
+        }
+      ],
+      "suggestion": "销售人员应给予客户充分考虑和决策的时间，不得利用活动截止等理由制造紧迫感诱导客户立即下单。"
+    }
+  ],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T01:20:26.512Z"
+}

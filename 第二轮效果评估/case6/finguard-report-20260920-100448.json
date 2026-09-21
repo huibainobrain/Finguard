@@ -1,0 +1,85 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "我不太会操作购买。"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "没关系，你把登录账号和验证码发给我，我直接帮你操作下单，比较快。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未涉及收益保证或本金承诺相关表述。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未涉及产品宣传或风险揭示相关表述。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确要求客户提供登录账号和验证码，并提出代客操作，严重违反账户安全管理规定。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "你把登录账号和验证码发给我，我直接帮你操作下单"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "严禁代客操作，严禁索要客户账号、密码及验证码。请引导客户自行通过官方渠道完成操作，若客户不会操作，可提供操作指引手册或远程指导，但不得触碰客户账户权限。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未对产品与客户匹配度做出判断，该对话主要涉及账户安全违规。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未涉及不当沟通行为，账户安全问题已在交易安全维度处理。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T02:04:47.221Z"
+}

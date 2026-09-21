@@ -1,0 +1,115 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "sales",
+      "text": "这款产品你可以放心买，本金肯定没问题，年化至少能有8%。"
+    },
+    {
+      "turnId": 2,
+      "role": "customer",
+      "text": "真的不会亏吗？"
+    },
+    {
+      "turnId": 3,
+      "role": "sales",
+      "text": "放心，不会亏的。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员明确承诺本金安全及年化至少8%的收益率，并在客户询问时保证“不会亏”，属于严重的保本保收益承诺行为。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "本金肯定没问题，年化至少能有8%。"
+        },
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "放心，不会亏的。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "销售人员不得承诺保本保收益或保证具体收益率，应向客户明确说明投资存在亏损风险，收益具有不确定性。"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "high",
+      "finalStatus": "high",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员仅夸大和承诺高收益，完全未向客户提示任何投资风险，严重隐瞒与淡化了风险。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "这款产品你可以放心买，本金肯定没问题，年化至少能有8%。"
+        },
+        {
+          "turnId": 3,
+          "role": "sales",
+          "quote": "放心，不会亏的。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": "销售人员在介绍产品时必须全面揭示风险，充分提示可能存在的亏损风险，不得作绝对化无风险宣传。"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未出现强行催促交易、代客操作、索要账号密码或验证码等违规行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "继续保持合规交易引导。"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "warning",
+      "finalStatus": "warning",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售人员在尚未了解客户风险承受能力且未确认产品风险等级的情况下，主动做出“你可以放心买”的产品匹配判断。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "这款产品你可以放心买"
+        }
+      ],
+      "missingInformation": [
+        "客户风险承受能力测评等级",
+        "产品风险等级"
+      ],
+      "suggestion": "销售人员应先引导客户完成风险测评，并在确认产品风险等级与客户风险承受能力相匹配后，方可进行产品推荐。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未出现不当索取敏感个人信息、威胁贬损客户或阻挠投诉等行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "继续保持专业文明的沟通态度。"
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "high",
+  "analyzedAt": "2026-09-20T01:16:27.766Z"
+}

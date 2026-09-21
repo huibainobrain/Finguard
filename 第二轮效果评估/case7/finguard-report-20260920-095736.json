@@ -1,0 +1,94 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "这个产品怎么样？"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "这个产品非常适合你，我建议你直接配置一些。"
+    },
+    {
+      "turnId": 3,
+      "role": "customer",
+      "text": "好的。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未提及保本、保收益或确定性收益率等承诺。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未进行夸大宣传或隐瞒风险，对话中未涉及具体产品风险揭示。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未强行催促交易或索要敏感账户信息。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "warning",
+      "finalStatus": "warning",
+      "reviewRequired": true,
+      "humanReviewed": false,
+      "reason": "销售明确声称产品“非常适合”客户，但对话中缺乏客户风险承受能力、投资经验及产品风险等级等信息，无法支撑该匹配判断。",
+      "evidence": [
+        {
+          "turnId": 2,
+          "role": "sales",
+          "quote": "这个产品非常适合你"
+        }
+      ],
+      "missingInformation": [
+        "客户风险承受能力等级",
+        "产品风险等级",
+        "客户风险测评记录"
+      ],
+      "suggestion": "建议先了解客户的投资目标和风险承受能力，并引导客户完成风险测评，再根据测评结果推荐匹配的产品。"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "沟通用语专业，未发现不当沟通行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "medium",
+  "analyzedAt": "2026-09-20T01:57:35.080Z"
+}

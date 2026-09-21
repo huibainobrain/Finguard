@@ -1,0 +1,91 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "sales",
+      "text": "我们不保证收益，也不能承诺本金不受损失。历史收益只能作为参考，不代表未来表现。"
+    },
+    {
+      "turnId": 2,
+      "role": "customer",
+      "text": "明白。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售明确表示不保证收益且不承诺本金不受损失，符合合规要求。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "我们不保证收益，也不能承诺本金不受损失。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售主动揭示了历史业绩不代表未来表现，风险揭示充分。",
+      "evidence": [
+        {
+          "turnId": 1,
+          "role": "sales",
+          "quote": "历史收益只能作为参考，不代表未来表现。"
+        }
+      ],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "对话中未出现任何交易诱导或账户安全风险行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售未进行任何产品推荐或匹配判断，符合适当性管理要求。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "沟通内容专业，无不当表达。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": ""
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "low",
+  "analyzedAt": "2026-09-20T01:56:48.488Z"
+}

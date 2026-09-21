@@ -1,0 +1,79 @@
+{
+  "dialogue": [
+    {
+      "turnId": 1,
+      "role": "customer",
+      "text": "你们这个是不是保证收益？是不是肯定不会亏？"
+    },
+    {
+      "turnId": 2,
+      "role": "sales",
+      "text": "不能这样理解，我们不能保证收益，也不能保证本金，投资存在亏损风险。"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimensionId": "return_promise",
+      "dimensionName": "收益与本金承诺",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员明确告知不能保证收益和本金，否定了保本保收益可能，未做出任何收益承诺。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "无"
+    },
+    {
+      "dimensionId": "risk_disclosure",
+      "dimensionName": "宣传与风险揭示",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员针对客户提问做出了清晰的风险揭示，明确提示投资存在亏损风险。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "无"
+    },
+    {
+      "dimensionId": "transaction_safety",
+      "dimensionName": "交易诱导与账户安全",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未出现强行催促交易、代客操作或索要账户密码等安全风险行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "无"
+    },
+    {
+      "dimensionId": "suitability",
+      "dimensionName": "客户适当性",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员未做出任何具体的产品推荐或适当性匹配判断，符合规范。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "无"
+    },
+    {
+      "dimensionId": "communication",
+      "dimensionName": "敏感信息与不当沟通",
+      "aiStatus": "pass",
+      "finalStatus": "pass",
+      "reviewRequired": false,
+      "humanReviewed": false,
+      "reason": "销售人员回应客观、专业，未出现索取敏感信息或贬损客户等不当沟通行为。",
+      "evidence": [],
+      "missingInformation": [],
+      "suggestion": "无"
+    }
+  ],
+  "customRuleResults": [],
+  "overallRisk": "low",
+  "analyzedAt": "2026-09-20T01:16:58.818Z"
+}
