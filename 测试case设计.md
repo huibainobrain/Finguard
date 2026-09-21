@@ -1,24 +1,3 @@
-# FinGuard 测试记录
-
-## 回归信息（请评委在使用真实模型验证后填写）
-
-```text
-测试模型：
-测试时间：
-Prompt 版本：v1.2（第三轮微修复：拆分 <dialogue>/<custom_rules> 的信任级别、进一步收紧客户适当性触发条件、
-新增自定义规则返回完整性校验，见 lib/prompts.ts、lib/schemas.ts）
-```
-
-## 关于"实际结果"的说明
-
-本项目开发环境中**没有可用的真实模型 API Key**（题目要求不得提交任何真实 API Key，评委将使用自己填写的模型 API 体验）。因此下方 Case 的"实际结果"如实标注为**待评委使用真实模型验证**，不编造结果，也不编造"失败 → 修复"的故事。
-
-这不代表相关链路完全没有被验证过。开发过程中做了两类不依赖真实大模型的验证，可分别在以下位置查证：
-
-1. **确定性逻辑的自动化单元测试**（`npm run test`，见 [`tests/`](tests/)）：覆盖对话解析（中英文冒号、续行、非法输入、无销售发言拒绝、无客户发言仍允许）、Evidence Grounding（销售证据通过、客户证据被拒绝、编造引用被拒绝、不存在的 `turn_id` 被拒绝）、风险聚合（任意 `high → 高风险`、仅 `warning → 中风险`、全部 `pass → 低风险`、人工修改后重新聚合）、High Risk Evidence Guard 降级、Warning Evidence Guard 的两种情况、`applyManualReview` 正确设置 `humanReviewed` 且不覆盖 AI 原始判断、CSV 重复 `id` 拒绝、`/api/analyze` 在输入不合法时不调用模型即返回 400、`checkCustomRuleCompleteness` 的完整匹配/缺失/未知/重复五种情况。这些是纯函数 / 路由级测试，不涉及大模型语义质量，可以稳定复现。
-2. **端到端联调**：用一个临时的本地 mock OpenAI-Compatible 服务（未纳入交付物，不提交到仓库）模拟 `/chat/completions` 响应，验证了请求格式、Base URL 归一化、JSON 清洗、Schema 校验、修复重试、Evidence Grounding、角色归因、High/Warning Evidence Guard、人工复核后"已人工复核"标签正确替换"需要人工复核"、批量顺序执行、自定义规则注入与命中、自定义规则完整性校验（第一次漏返回一条规则 → 触发修复重试 → 第二次补全 → 分析成功；以及第二次仍漏返回 → 明确失败提示，不静默丢弃）、CSV 重复 id 拦截、无销售发言拦截、CSV/TXT 导入导出等**代码路径**均按预期工作，UI 各状态（未配置模型/分析中/分析成功/分析失败/连接失败）均已在浏览器中实际点击验证。这一步验证的是"链路不会卡死、不会崩溃、数据流转正确"，**不代表已经验证了真实大模型的语义判断质量**——真实语义质量（例如模型是否总能正确识别隐性承诺、是否会被 Prompt Injection 影响、是否能正确区分"客户表达风险偏好"与"销售做出适当性判断"）取决于评委实际使用的模型，因此如实留空，交由评委验证。
-
-下方 Case 01–06 对应 `samples/01-normal.txt` 至 `samples/06-suitability-review.txt`；Case 07–09 为定向修复新增的场景（Prompt Injection、客户表达风险偏好但销售正确处理、自定义规则内的 Prompt Injection），不依赖固定样本文件。
 
 ---
 
