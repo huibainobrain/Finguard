@@ -372,7 +372,7 @@ finguard/
 
 候选人负责：产品定义、金融合规质检维度设计、AI Workflow 设计、规则与 LLM 的职责划分、Prompt 约束设计、Bad Case 场景设计、验收标准、最终产品走查。
 
-Claude Code 主要辅助：Next.js 工程搭建、组件开发、API 路由实现、类型与 Zod Schema 实现、对话/CSV 解析、导出功能、Vitest 单元测试，以及在开发环境没有真实模型 API Key 的情况下，用一个临时的本地 mock OpenAI-Compatible 服务（未纳入交付物）对请求格式、Schema 校验、Evidence Grounding、角色归因、High/Warning Evidence Guard、人工复核状态、批量流程等确定性链路进行了端到端联调——这一步只验证"代码路径是否按预期工作"，不代表已验证真实大模型的语义判断质量；`TEST_CASES.md` 中的"实际结果"如实标注为待评委使用真实模型验证，没有编造结果。
+Claude Code 主要辅助：Next.js 工程搭建、组件开发、API 路由实现、类型与 Zod Schema 实现、对话/CSV 解析、导出功能、Vitest 单元测试，以及在开发环境没有真实模型 API Key 的情况下，用一个临时的本地 mock OpenAI-Compatible 服务（未纳入交付物）对请求格式、Schema 校验、Evidence Grounding、角色归因、High/Warning Evidence Guard、人工复核状态、批量流程等确定性链路进行了端到端联调——这一步只验证"代码路径是否按预期工作"，不代表已验证真实大模型的语义判断质量。
 
 第二轮定向修复针对验收中发现的问题：修正客户适当性维度"仅因缺少背景信息就误报"的逻辑、收紧"证据不足"规则的适用范围、新增 `humanReviewed`（已人工复核）状态以消除与"需要人工复核"同时展示的冲突、新增 Warning Evidence Guard、新增 Prompt Injection 防御（`<dialogue>`/`<custom_rules>` 标签 + 系统提示声明）、新增 CSV 重复 `id` 校验与"无销售发言"输入拦截，均补充了对应的确定性单元测试。
 
